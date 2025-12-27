@@ -23,9 +23,11 @@ TEMPLATE_DIR=os.path.join(BASE_DIR,'templates')
 SECRET_KEY = 'django-insecure-$ep#0(dmlo1vp+-nfhf++pqr)_z7n8nvumf=+vded&k*s6-^68'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG=False # for production
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['13.60.170.36','127.0.0.1']
 
 
 # Application definition
@@ -129,7 +131,9 @@ SITE_ID=1
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT='static/'
+# STATIC_ROOT='static/'
+#production
+STATIC_ROOT=BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
